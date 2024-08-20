@@ -1,30 +1,83 @@
-# React + TypeScript + Vite
+npm create vite@latest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+y/ enter
+nome do projeto / enter
+enter
+typescript /enter
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+após isso abrir o visual studio code e entrar na pasta e dar o npm install
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+para rodar o projeto npm run dev
+instalar o bootstrap / npm install boostrap
+instalar esse também npm install react-bootstrap
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
+------------------------------------------------------------------------------------------
+instalar  libs
+
+npm install @types/jsonwebtoken
+npm install jsonwebtoken
+
+npm install axios
+
+npm install json-server
+npm install json-server-auth
+
+npm install jwt-decode
+
+
+--------------------------------------------------------------------------------------------
+criamos a pasta jsonserver e o arquivo db.json dentro da pasta, na raiz do projeto
+
+{
+    "users":[
+        {
+            "id": 1,
+            "email": "admin@gmail.com",
+            "password": "$2a$10$Y4/4ws04wYotZQg2RB1bwurp7W6RCq.NLrUEEONlOZEdjLXCVG/LW",
+            "nome": "Admin",
+            "permissoes": "admin"
+        }
+    ]
 }
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+----------------------------------------------------------------------------------------------
+comando para iniciar o json server
+
+npx json-server ./jsonserver/db.json --port 3001 -m ./node_modules/json-server-auth
+
+no arquivo packeje.json
+
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "server" : "npx json-server ./jsonserver/db.json --port 3001 -m ./node_modules/json-server-auth"   // colocamos um apelido para o comando esse é o caminho pro arquivo db.json
+  },
+
+
+comando para rodar --  npm run server
+---------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

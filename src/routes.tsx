@@ -8,6 +8,8 @@ import {
 import Login from './pages/Login';
 import Dashboard from './pages/dashboard';
 import Produto from './pages/Produto';
+import PaginaDeExemplo from './PaginaDeExemplo';
+
 
 export const Rotas = () => {
     return (
@@ -16,6 +18,7 @@ export const Rotas = () => {
                 <Route path='/' element={<Login />} />
                 <Route path='/dashboard' element={<Dashboard />} />
                 <Route path='/produto/:id' element={<Produto />} />
+                <Route path='/PaginaDeExemplo' element={<PaginaDeExemplo />} />
             </Routes>
         </BrowserRouter>
     );
