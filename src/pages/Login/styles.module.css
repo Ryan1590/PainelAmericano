@@ -13,3 +13,14 @@ border-color: #ccc;
 border-style: solid;
 padding: 20px;
 }
+
+.main {
+    background-image: url('/src/Imagens/imgfundoLogin.avif'); /* Caminho para a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
