@@ -1,13 +1,19 @@
-export const LayoutDashboard = () => {
+import { Link } from 'react-router-dom';
+import { ReactNode } from 'react';
+import { Itoken } from '../../interfaces/token';
+
+interface Iprops {
+    children: ReactNode;
+    token?: Itoken | null;
+}
+
+export const LayoutDashboard = (props: Iprops) => {
     return (
         <>
-        <header
-                className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0"
-            >
-                <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3"
-                    href="#">
+            <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+                <Link className="navbar-brand col-md-3 col-lg-2 me-0 px-3" to="/">
                     Sistema Autenticação
-                </a>
+                </Link>
                 <button
                     className="navbar-toggler position-absolute d-md-none collapsed"
                     type="button"
@@ -23,7 +29,7 @@ export const LayoutDashboard = () => {
                 <div className="w-100"></div>
                 <div className="navbar-nav">
                     <div className="nav-item text-nowrap">
-                        <a className="nav-link px-3" href="#">Sair</a>
+                        <Link className="nav-link px-3" to="/">Sair</Link>
                     </div>
                 </div>
             </header>
@@ -37,27 +43,19 @@ export const LayoutDashboard = () => {
                         <div className="position-sticky pt-3">
                             <ul className="nav flex-column">
                                 <li className="nav-item">
-                                    <a
-                                        className={`nav-link`}
-                                        href={'/dashboard'}
-                                    >
+                                    <Link className="nav-link" to="/dashboard">
                                         Dashboard
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
                     </nav>
 
-
-                    <main
-                        className="col-md-9 ms-sm-auto col-lg-10 px-md-4"
-                    >
-
-
+                    <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                        {props.children}
                     </main>
-
                 </div>
             </div>
         </>
-    )
+    );
 }

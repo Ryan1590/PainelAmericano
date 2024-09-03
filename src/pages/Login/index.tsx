@@ -31,13 +31,17 @@ export default function Login() {
                 password: senhaValue,
             })
             .then((resposta) => {
-                console.log("Deu bom");
                 console.log(resposta);
                 setLoading(false);
+
+                localStorage.setItem(
+                    'americanos.token', 
+                    JSON.stringify(resposta)
+                )
+
                 navigate('/dashboard'); 
             })
             .catch((erro) => {
-                console.log("Deu ruim");
                 console.log(erro);
                 setLoading(false);
                 setToast(true);
@@ -61,7 +65,7 @@ export default function Login() {
         <Toast 
             show={toast} 
             message= 'Dados inválidos' 
-            color='danger'
+            colors='danger'
             onClose={()=>{setToast(false)}}
         />
         
