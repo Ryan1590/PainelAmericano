@@ -52,6 +52,11 @@ export const LayoutDashboard = (props: Iprops) => {
                                         Voluntários
                                     </Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/usuarios">
+                                        Usuarios
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                     </nav>
