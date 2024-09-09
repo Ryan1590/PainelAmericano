@@ -47,6 +47,11 @@ export const LayoutDashboard = (props: Iprops) => {
                                         Dashboard
                                     </Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/voluntarios">
+                                        Voluntários
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                     </nav>
