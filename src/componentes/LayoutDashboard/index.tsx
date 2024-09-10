@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ReactNode } from 'react';
 import { Itoken } from '../../interfaces/token';
 
@@ -8,6 +8,13 @@ interface Iprops {
 }
 
 export const LayoutDashboard = (props: Iprops) => {
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem('americanos.token'); 
+        navigate('/');
+    };
+
     return (
         <>
             <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
@@ -26,10 +33,12 @@ export const LayoutDashboard = (props: Iprops) => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="w-100"></div>
+                 <div className="w-100"></div>
                 <div className="navbar-nav">
                     <div className="nav-item text-nowrap">
-                        <Link className="nav-link px-3" to="/">Sair</Link>
+                        <button className="nav-link px-3 btn btn-link" onClick={handleLogout}>
+                            Sair
+                        </button>
                     </div>
                 </div>
             </header>
