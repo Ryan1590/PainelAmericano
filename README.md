@@ -63,7 +63,7 @@ no arquivo packeje.json
 comando para rodar --  npm run server
 ---------------------------------------------------------------------------------------------------
 
-
+npm install react-hook-form // para gerenciar formulario diferente da tela de login
 
 
 

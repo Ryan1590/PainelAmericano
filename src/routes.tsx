@@ -11,6 +11,7 @@ import Produto from './pages/Produto';
 import PaginaDeExemplo from './PaginaDeExemplo';
 import Voluntarios from './pages/Voluntarios';
 import Usuarios from './pages/Usuarios';
+import GerenciarUsuarios from './pages/Usuarios/Gerenciar';
 
 
 export const Rotas = () => {
@@ -23,6 +24,7 @@ export const Rotas = () => {
                 <Route path='/PaginaDeExemplo' element={<PaginaDeExemplo />} />
                 <Route path='/voluntarios' element={<Voluntarios />} />
                 <Route path='/usuarios' element={<Usuarios />} />
+                <Route path='/usuarios/id' element={<GerenciarUsuarios />} />
             </Routes>
         </BrowserRouter>
     );

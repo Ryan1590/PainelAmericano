@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { LayoutDashboard } from "../../componentes/LayoutDashboard";
+import { LayoutDashboard } from "../../../componentes/LayoutDashboard";
 import { useEffect, useState } from "react";
-import { Itoken } from "../../interfaces/token";
-import { verificaTokenExpirado } from "../../services/token";
-import { Loading } from "../../componentes/Loading";
+import { verificaTokenExpirado } from "../../../services/token";
+import { Loading } from "../../../componentes/Loading";
+import { Itoken } from "../../../interfaces/token";
 import axios from "axios";
 
 interface IUsuarios {
@@ -57,7 +57,7 @@ export default function Usuarios() {
             <LayoutDashboard>
                 <div className="d-flex justify-content-between mt-3">
                     <h1>Usuarios</h1>
-                    <button type="button" className="btn btn-success" onClick={() => {}}>Adicionar</button>
+                    <button type="button" className="btn btn-success" onClick={() => { navigate('/usuarios/criar') }}>Adicionar</button>
                 </div>
 
                 <table className="table table-striped">
