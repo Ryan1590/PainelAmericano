@@ -6,6 +6,15 @@
             "password": "$2a$10$Y4/4ws04wYotZQg2RB1bwurp7W6RCq.NLrUEEONlOZEdjLXCVG/LW", 
             "nome": "Admin",
             "permissoes": "admin"
+        },
+
+        {
+            "id": 2,
+            "email": "ryan@gmail.com",
+            "password": "$2a$10$Y4/4ws04wYotZQg2RB1bwurp7W6RCq.NLrUEEONlOZEdjLXCVG/LW", 
+            "nome": "Ryan",
+            "permissoes": "admin"
         }
+
     ]
 }
